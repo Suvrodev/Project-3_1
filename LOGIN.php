@@ -72,8 +72,8 @@
 
             <!-- Link List -->
             <div class="Link_List">
-                <a href="#" target="_blank">Student Panel</a><br><br>
-                <a href="#" target="_blank">Admin Panel</a>
+                <a href="#" >Student Panel</a><br><br>
+                <a href="ADMIN_INSERT.php" >Admin Panel</a>
             </div>
         </div>
 
@@ -98,15 +98,42 @@
                 <form action="LOGIN.php" method="POST" name="login_form" target="_self">
                     <br><br><br><br>
                     <label for="fid">ID Number :</label>
-                    <input type="number" id="id_id" placeholder="20192011010"><br><br>
+                    <input type="number" name="id_id" placeholder="20192011010" id="id_id"><br><br>
 
                     <label for="fpass">Password:</label>
                     &nbsp; &nbsp;
-                    <input type="password" id="password_id">
+                    <input type="password" name="password_id" id="password_id">
                     <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    <input type="button" value="Submit" id="submit_id">
-                    <input type="reset" value="Reset" id="reset_id">
+                    <input type="submit" name="submit" id="submit_id">
+                    <input type="reset" name="Reset" id="reset_id" >
                 </form>
+                <!-- Form OutPut -->
+                <div class="formOutput">
+                <?php
+                  if(isset($_POST['submit']))
+                  {
+                      $ID=$_POST['id_id'];
+                      $PASSWORD=$_POST['password_id'];
+                      echo "ID: $ID","<br>";
+                      echo "Password: $PASSWORD","<br>";
+
+                      $Con= new mysqli("localhost","root","","project");
+                      $sql= "SELECT * FROM info WHERE ID='".$ID. "'AND Password='".$PASSWORD."'";
+                      $Result=mysqli_query($Con,$sql);
+                      $Found_Row=mysqli_num_rows($Result);
+                      if($Found_Row>0){
+                          echo "Login Successfully","<br>";  
+                                echo "<table><tr><th>ID</th><th>Name</th></tr>";
+                      }else{
+                          echo "Incorrect ID or Password","<br>";
+                      }
+                      
+                  }
+                  //echo "This is By PHP";
+                ?>
+                
+                </div>
+               
 
 
             </div>

@@ -1,14 +1,13 @@
-.title_cls{
+.title_cls {
     background: #B7E2F9;
     width: 100%;
     color: #0C4DA2;
-    padding:10px;
+    padding: 10px;
     border: 1px dotted green;
     text-align: center;
-    
 }
 
-.mrk{
+.mrk {
     text-align: justify;
     margin-top: -14px;
     color: #FFFFFF;
@@ -17,25 +16,29 @@
     background-color: #186474;
 }
 
-.head_class{
-    background-color:darkcyan;
+.head_class {
+    background-color: darkcyan;
     text-align: center;
     padding: 1% 7%;
 }
-.head_class a{
+
+.head_class a {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 20px;
     cursor: pointer;
 }
+
+
 /* Dropdown */
-.contactme_container{
+
+.contactme_container {
     display: inline;
     position: relative;
-
 }
-.contactme_content{
+
+.contactme_content {
     position: absolute;
     top: 30px;
     right: 10px;
@@ -43,24 +46,29 @@
     background-color: #40868b;
     min-width: 100px;
     display: none;
-
 }
-.contactme_content a{
+
+.contactme_content a {
     display: block;
 }
-.contactme_content a:hover{
+
+.contactme_content a:hover {
     background-color: green;
 }
-.contactme_container:hover .contactme_content{
+
+.contactme_container:hover .contactme_content {
     display: block;
 }
+
+
 /* Dropdown */
-.Academic_container{
+
+.Academic_container {
     display: inline;
     position: relative;
-
 }
-.Academic_content{
+
+.Academic_content {
     position: absolute;
     top: 30px;
     right: 10px;
@@ -68,25 +76,29 @@
     background-color: #40868b;
     min-width: 100px;
     display: none;
-
 }
-.Academic_content a{
+
+.Academic_content a {
     display: block;
 }
-.Academic_content a:hover{
+
+.Academic_content a:hover {
     background-color: green;
 }
-.Academic_container:hover .Academic_content{
+
+.Academic_container:hover .Academic_content {
     display: block;
 }
 
+
 /* Dropdown */
-.Faculty_container{
+
+.Faculty_container {
     display: inline;
     position: relative;
-
 }
-.Faculty_content{
+
+.Faculty_content {
     position: absolute;
     top: 30px;
     right: 10px;
@@ -94,121 +106,131 @@
     background-color: #40868b;
     min-width: 100px;
     display: none;
-
 }
-.Faculty_content a{
+
+.Faculty_content a {
     display: block;
 }
-.Faculty_content a:hover{
+
+.Faculty_content a:hover {
     background-color: green;
 }
-.Faculty_container:hover .Faculty_content{
+
+.Faculty_container:hover .Faculty_content {
     display: block;
 }
 
-.This_is_body_Class{
+.This_is_body_Class {
     width: 100%;
-    background-color:deepskyblue;
+    background-color: deepskyblue;
     display: flex;
 }
 
-.Link_Clss{
-    
+.Link_Clss {
     width: 15%;
-    display:flex-basis;
-    background-color:cornflowerblue ;
+    display: flex-basis;
+    background-color: cornflowerblue;
     float: left;
 }
 
-.Link_Name{
+.Link_Name {
     font-weight: bold;
-   background-color: skyblue;
-   color: black;
-   height: 20px;
-   text-align: center;
-   
+    background-color: skyblue;
+    color: black;
+    height: 20px;
+    text-align: center;
 }
-.Link_List{
-   
+
+.Link_List {
     background-color: green;
     text-align: center;
-    padding:15px;
+    padding: 15px;
 }
 
-.Link_List a{
-   margin:20px;
-   height:1px;
-   color: white;
-   text-decoration: none;
-   background-color: rosybrown;
-   padding: 2px 3px;
-   
-
+.Link_List a {
+    margin: 20px;
+    height: 1px;
+    color: white;
+    text-decoration: none;
+    background-color: rosybrown;
+    padding: 2px 3px;
 }
-.Link_List a:hover{
+
+.Link_List a:hover {
     color: blue;
-    background-color:violet;
+    background-color: violet;
     font-size: 15px;
     padding: 3px 3px;
- }
-.Component_Class{
-    width: 70%;
-    display:flex-basis;
-    background-color:blueviolet ;
-    float: left;
-    color:azure;
 }
-.Student_Activity{
+
+.Component_Class {
+    width: 70%;
+    display: flex-basis;
+    background-color: blueviolet;
+    float: left;
+    color: azure;
+}
+
+.Student_Activity {
     margin-left: 22rem;
     width: 140px;
     height: 25px;
-    background-color:red;
+    background-color: red;
 }
-.Login_Form{
-    font-size:1rem;
+
+.Login_Form {
+    font-size: 1rem;
 }
+
 #id_id {
-       padding:2px 20px;
-       font-size: 1rem;
-       box-sizing: border-box;
-       border-radius: 5px;
-       border: 3px solid violet;
-       
-       
+    padding: 2px 20px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 3px solid violet;
 }
+
 #password_id {
-    padding:2px 20px;
+    padding: 2px 20px;
     font-size: 1rem;
     border-radius: 5px;
     border: 3px solid violet;
 }
-#submit_id{
+
+#submit_id {
     border: none;
-    background-color:rgb(42, 117, 117);
-    color:whitesmoke;
+    background-color: rgb(42, 117, 117);
+    color: whitesmoke;
     padding: 10px;
     margin: 2px;
     cursor: pointer;
 }
-#reset_id{
+
+#reset_id {
     border: none;
-    background-color:rgb(42, 117, 117);
-    color:whitesmoke;
+    background-color: rgb(42, 117, 117);
+    color: whitesmoke;
     padding: 10px;
     margin: 2px;
     cursor: pointer;
     margin-left: 10px;
 }
 
-.Advertisement_Class{
+.Advertisement_Class {
     width: 15%;
-    display:flex-basis;
-    background-color:chartreuse ; 
+    display: flex-basis;
+    background-color: chartreuse;
     float: left;
 }
 
-.Footer_Class{
-    background-color:darkgreen;
+.formOutput {
+    margin-bottom: 10rem;
+    position: relative;
+}
+
+.Footer_Class {
+    margin-top: 20rem;
+    background-color: darkgreen;
     color: aliceblue;
     width: 100%;
     height: 100px;

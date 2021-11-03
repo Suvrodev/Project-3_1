@@ -1,0 +1,94 @@
+.title_cls {
+    background: #B7E2F9;
+    width: 100%;
+    color: #0C4DA2;
+    padding: 10px;
+    border: 1px dotted green;
+    text-align: center;
+}
+
+.mrk {
+    text-align: justify;
+    margin-top: -14px;
+    color: #FFFFFF;
+    border: 2px double red;
+    border-radius: 2px;
+    background-color: #186474;
+}
+
+.This_is_body_Class {
+    width: 100%;
+    background-color: deepskyblue;
+    display: flex;
+}
+
+.Link_Clss {
+    width: 15%;
+    display: flex-basis;
+    background-color: cornflowerblue;
+    float: left;
+}
+
+.Link_Name {
+    font-weight: bold;
+    background-color: skyblue;
+    color: black;
+    height: 20px;
+    text-align: center;
+}
+
+.Link_List {
+    background-color: green;
+    text-align: center;
+    padding: 15px;
+}
+
+.Link_List a {
+    margin: 20px;
+    height: 1px;
+    color: white;
+    text-decoration: none;
+    background-color: rosybrown;
+    padding: 2px 3px;
+}
+
+.Link_List a:hover {
+    color: blue;
+    background-color: violet;
+    font-size: 15px;
+    padding: 3px 3px;
+}
+
+.Component_Class {
+    width: 70%;
+    display: flex-basis;
+    background-color: blueviolet;
+    float: left;
+    color: azure;
+}
+
+.Admin_delete_Activity {
+    margin-left: 23rem;
+    width: 140px;
+    height: 25px;
+    background-color: red;
+}
+
+.insert_stu {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.Advertisement_Class {
+    width: 15%;
+    display: flex-basis;
+    background-color: chartreuse;
+    float: left;
+}
+
+.Footer_Class {
+    background-color: darkgreen;
+    color: aliceblue;
+    width: 100%;
+    height: 100px;
+}
