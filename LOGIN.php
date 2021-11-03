@@ -106,8 +106,9 @@
                     <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <input type="button" value="Submit" id="submit_id">
                     <input type="reset" value="Reset" id="reset_id">
-
                 </form>
+
+
             </div>
         </div>
 
