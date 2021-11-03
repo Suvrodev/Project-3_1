@@ -1,0 +1,36 @@
+.title_cls {
+    background: #B7E2F9;
+    width: 100%;
+    color: #0C4DA2;
+    padding: 10px;
+    border: 1px dotted green;
+    text-align: center;
+}
+
+.mrk {
+    text-align: justify;
+    margin-top: -14px;
+    color: #FFFFFF;
+    border: 2px double red;
+    border-radius: 2px;
+    background-color: #186474;
+}
+
+.This_is_body_Class {
+    background-color: salmon;
+}
+
+.Student_Activity {
+    margin-left: 34rem;
+    width: 110px;
+    height: 25px;
+    background-color: red;
+}
+
+.Footer_Class {
+    margin-top: 20rem;
+    background-color: darkgreen;
+    color: aliceblue;
+    width: 100%;
+    height: 100px;
+}
