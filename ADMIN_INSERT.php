@@ -118,7 +118,8 @@
                     <input type="email" name="mail_id"  id="mail_id" required><br><br>
 
                     <label for="flocation">Location :</label>
-                    <textarea name="address_id"   id="location_id" required cols="25" rows="2">
+                    <input type="text" name="address_id"  id="location_id" required><br><br>
+                    <!-- <textarea name="address_id"   id="location_id" required cols="25" rows="2"> -->
                     </textarea>
                     <br><br>
 

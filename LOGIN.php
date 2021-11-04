@@ -1,3 +1,31 @@
+<div class="Retrive_Data">
+                <?php
+                if(isset($_POST['submit'])){
+                   // echo "Submit Button Clicked";
+                    $ID=$_POST['id_id_DT'];
+                    $PASSWORD=$_POST['password_id_DT'];
+                   // echo "<br> ID: $ID AND Password: $PASSWORD";
+                    $con=new mysqli("localhost","root","","project");
+                    if (!$con) {
+                       die("Connection failed: " . mysqli_connect_error());
+                     }
+                     $Select_sqll="SELECT ID, Name, Age, Sex, Department, Semester, CGPA, MeritalStatus, Religion, Phone_Number, DOB, Email, Location, Password 
+                     FROM info WHERE ID='".$ID."' AND Password='".$PASSWORD."'";
+                     $result = $con->query($Select_sqll);
+                     $Result=mysqli_query($con,$Select_sqll);
+                     $Found_Row=mysqli_num_rows($Result);
+                     if($Found_Row>0){
+                       //  echo "<br> $ID Founded";
+                       //  echo "<br>STUDENTRESULT"; 
+                       $url= "STUDENTRESULT.php?userid=".$ID;
+                         header('Location:'.$url);
+                         exit();
+                     }
+                     //exit();
+                }
+                ?>
+            </div>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,23 +119,71 @@
             </div>
            
             <!-- Here used STUDENTSRESULT because of datapassing -->
-            <div class="Login_Form">
+            <!-- <div class="Login_Form">
 
                 <form action="STUDENTRESULT.php" method="POST" name="login_form" target="_self">
+                   
                     <br><br><br><br>
                     <label for="fid">ID Number :</label>
-                    <input type="number" name="id_id_DT" placeholder="20192011010" id="id_id"><br><br>
+                    <input type="number" name="id_id_DT" placeholder="20192011010" id="id_id"> <br><br>
 
                     <label for="fpass">Password:</label>
                     &nbsp; &nbsp;
-                    <input type="password" name="password_id_DT" id="password_id">
+                    <input type="password" name="password_id_DT" id="password_id" value="123">
                     <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <input type="submit" name="submit" id="submit_id">
-                    <!-- <input type="reset" name="Reset" id="reset_id" > -->
+                    <input type="reset" name="Reset" id="reset_id" >
                 </form>
-                <!-- Form OutPut -->
 
+            </div> -->
+
+             <div class="Login_Form_header">
+
+                <form action="LOGIN.php" method="POST" name="login_form" target="_self">
+                   
+                    <br><br><br><br>
+                    <label for="fid">ID Number :</label>
+                    <input type="number" name="id_id_DT"  id="id_id" value="20192011010"> <br><br>
+
+                    <label for="fpass">Password:</label>
+                    &nbsp; &nbsp;
+                    <input type="password" name="password_id_DT" id="password_id" value="78876338">
+                    <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <input type="submit" name="submit" id="submit_id">
+                    <input type="reset" name="Reset" id="reset_id" >
+                </form>
             </div>
+
+            <div class="Retrive_Data_">
+                <?php
+                if(isset($_POST['submit'])){
+                    echo "Submit Button Clicked";
+                    $ID=$_POST['id_id_DT'];
+                    $PASSWORD=$_POST['password_id_DT'];
+                    echo "<br> ID: $ID AND Password: $PASSWORD";
+                    $con=new mysqli("localhost","root","","project");
+                    if (!$con) {
+                       die("Connection failed: " . mysqli_connect_error());
+                     }
+                     $Select_sqll="SELECT ID, Name, Age, Sex, Department, Semester, CGPA, MeritalStatus, Religion, Phone_Number, DOB, Email, Location, Password 
+                     FROM info WHERE ID='".$ID."' AND Password='".$PASSWORD."'";
+                     $result = $con->query($Select_sqll);
+                     $Result=mysqli_query($con,$Select_sqll);
+                     $Found_Row=mysqli_num_rows($Result);
+                     if($Found_Row>0){
+                        //  echo "<br> $ID Founded";
+                        //  echo "<br>STUDENTRESULT"; 
+                        //  header('Location:STUDENTRESULT.php');
+                     }else{
+                         echo "<br> Not Found";
+                     }
+                }
+                ?>
+            </div>
+
+         
+
+
         </div>
 
         <div class="Advertisement_Class">

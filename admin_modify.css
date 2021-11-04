@@ -17,8 +17,9 @@
 }
 
 .This_is_body_Class {
+    height: auto;
     width: 100%;
-    background-color: deepskyblue;
+    background-color: rgb(255, 0, 76);
     display: flex;
 }
 
@@ -60,7 +61,8 @@
 }
 
 .Component_Class {
-    width: 70%;
+    height: auto;
+    width: 85%;
     display: flex-basis;
     background-color: blueviolet;
     float: left;
