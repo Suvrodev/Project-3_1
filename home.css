@@ -121,6 +121,7 @@
 }
 
 .This_is_body_Class {
+    height: auto;
     width: 100%;
     background-color: deepskyblue;
     display: flex;
@@ -164,7 +165,8 @@
 }
 
 .Component_Class {
-    width: 70%;
+    height: auto;
+    width: 60%;
     display: flex-basis;
     background-color: blueviolet;
     float: left;
@@ -217,21 +219,47 @@
 }
 
 .Advertisement_Class {
-    width: 15%;
+    width: 25%;
     display: flex-basis;
     background-color: chartreuse;
     float: left;
 }
 
 .formOutput {
-    margin-bottom: 10rem;
     position: relative;
 }
 
 .Footer_Class {
-    margin-top: 20rem;
     background-color: darkgreen;
     color: aliceblue;
     width: 100%;
     height: 100px;
+}
+
+.NationalSong {
+    background-color: crimson;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.song {
+    background-color: green;
+    padding: 5px;
+    color: red;
+}
+
+.Msgofdean {
+    font-size: 18px;
+    margin: 2px;
+    background-color: #CD76F6;
+    color: black;
+    text-align: center;
+}
+
+.MessageShow {
+    background-color: rgb(43, 226, 165);
+    text-align: center;
+    height: 150px;
+    margin: 25px;
+    /* width: 60%; */
 }

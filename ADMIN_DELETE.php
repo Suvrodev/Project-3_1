@@ -32,6 +32,7 @@
                 <a href="ADMIN_MODIFY.php" >Modify</a> <br><br>
                 <a href="#.php" >Delete</a> <br><br>
                 <a href="ADMIN_SHOW.php" >Show Students</a> <br><br>
+                <a href="DL.php" >Dean Profile</a>
             </div>
         </div>
 

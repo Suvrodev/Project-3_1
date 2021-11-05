@@ -9,11 +9,16 @@
     <h2 class="title_cls">Welcome to Admin Panel(Modification)</h2>
 
     <style>
+        #submit_id_m{
+            visibility: hidden;
+        }
+
         table{
             border-collapse: collapse;
             border: 2px solid black;
             width: 500px;
             background-color: violet;
+            visibility: hidden;
         }
 
         th, td {
@@ -62,6 +67,7 @@
                 <a href="#" >Modify</a> <br><br>
                 <a href="ADMIN_DELETE.php" >Delete</a> <br><br>
                 <a href="ADMIN_SHOW.php" >Show Students</a> <br><br>
+                <a href="DL.php" >Dean Profile</a>
             </div>
         </div>
 
@@ -111,7 +117,15 @@
                      $Found_Row=mysqli_num_rows($Result);
 
                      if($Found_Row>0){
-                       
+                       ?> <style>
+                            table{
+                             visibility: visible;
+                            }
+                            #submit_id_m{
+                           visibility: visible;
+                           }
+                       </style>
+                        <?php
                         // output data of each row
                         while($row = $result->fetch_assoc()) {
                             $IDD=  $row["ID"];
@@ -203,7 +217,7 @@
                        </tr>
                    </table>
                     <br>
-                   <input type="submit" name="submit_m" id="submit_id" value="modify">
+                   <input type="submit" name="submit_m" id="submit_id_m" value="modify">
                 </form>          
             </div>
 

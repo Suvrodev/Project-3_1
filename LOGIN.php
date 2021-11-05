@@ -101,7 +101,8 @@
             <!-- Link List -->
             <div class="Link_List">
                 <a href="#" >Student Panel</a><br><br>
-                <a href="ADMIN_INSERT.php" >Admin Panel</a>
+                <a href="AL.php" >Admin Panel</a><br><br>
+                <a href="DL.php" >Dean Profile</a>
             </div>
         </div>
 
@@ -187,8 +188,50 @@
         </div>
 
         <div class="Advertisement_Class">
-            Advertisement_After
+           <div class="NationalSong">
+               National Song of Bangladesh
+           </div>
+           <div class="song">
+           <audio controls >
+             <source src="NationalSong.mp3" type="audio/mpeg">
+      </audio>
+           </div>
+           <div class="Msgofdean">
+               Show Dean Sir's Message
+           </div>
+
+           <!-- Message -->
+           <div class="phpcodeformsg">
+            <?php 
+                 $con=new mysqli("localhost","root","","project");
+                 if (!$con) {
+                    die("Connection failed: " . mysqli_connect_error());
+                  }
+                  $Select_sqll="SELECT  Message
+                  FROM dean
+                  WHERE ID='admin'";
+                   $result = $con->query($Select_sqll);
+
+                   $Result=mysqli_query($con,$Select_sqll);
+                   $Found_Row=mysqli_num_rows($Result);
+                   if($Found_Row>0){
+                    while($row = $result->fetch_assoc()) {
+                        $MSG=  $row["Message"];
+                    }
+                   }
+                  // echo "<br>Message: $MSG";
+            ?>
         </div>
+
+        <div class="MessageShow">
+          <?php
+             echo "$MSG"
+          ?>
+
+        </div>
+        </div>
+        
+       
 
 
     </div>

@@ -1,0 +1,46 @@
+#h {
+    background-color: #ff4d4d;
+    padding: 10px;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+}
+
+#b {
+    color: black;
+}
+
+.d {
+    height: 500px;
+    width: 400px;
+    background-color: #dcdde1;
+    border: 3px solid black;
+    border-radius: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#form {
+    color: black;
+    margin: 5px;
+    text-align: center;
+    padding: 3px;
+    height: 20px;
+    width: 380px;
+}
+
+.rgimg {
+    height: 120px;
+    width: 120px;
+}
+
+#button {
+    margin: 5px;
+    text-align: center;
+    padding: 2px;
+    height: 30px;
+    width: 380px;
+    background-color: cadetblue;
+    border: 3px solid black;
+    border-radius: 25px;
+}

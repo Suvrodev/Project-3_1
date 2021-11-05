@@ -39,6 +39,7 @@ table, th, td {
                 <a href="ADMIN_MODIFY.php" >Modify</a> <br><br>
                 <a href="ADMIN_DELETE.php" >Delete</a> <br><br>
                 <a href="#.php" >Show Students</a> <br><br>
+                <a href="DL.php" >Dean Profile</a>
             </div>
         </div>
 
