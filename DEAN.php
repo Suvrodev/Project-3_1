@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dean Profile</title>
     <link rel="stylesheet" href="dean.css">
-    <h2 class="title_cls">Welcome to Dean Profile</h2>
+
+    <div class="Title_top">
+    <a href="LOGIN.php"> <img src="logo.jpeg" class="logoimg" width="50" height="50"></img> </a>
+    <h2 class="title_cls">
+      Welcome to Dean Profile</h2>
+    </div>
+
+    <!-- <h2 class="title_cls">Welcome to Dean Profile</h2> -->
     <style>
         #submit_id_m{
             visibility: hidden;
@@ -73,6 +80,7 @@
                 <a href="ADMIN_DELETE.php" >Delete</a> <br><br>
                 <a href="ADMIN_SHOW.php" >Show Students</a> <br><br>
             </div>
+            <!-- Link_Clss End -->
         </div>
 
          <!-- It is Component Class -->
@@ -316,10 +324,115 @@
 
               }
          ?>
+         <!-- MSG php End -->
      </div>
+      
+     <div class="pdf_form">
+         <h2>Upload Routine For(PDF)</h2>
+         <form action="DEAN.php" method="POST" name="pdfform" enctype="multipart/form-data">
+          <label for="cse">CSE Department:</label><br>
+          <input type="file" name="cse_id" id="id_id" ><br>
+          <input type="submit" name="submit_cse" id="upload_file" value="Upload"> <br><br>
+
+          <label for="cse">EEE Department:</label><br>
+          <input type="file" name="eee_id" id="id_id" ><br>
+          <input type="submit" name="submit_eee" id="upload_file" value="Upload"> <br><br>
+
+          <label for="cse">CIVIL Department:</label><br>
+          <input type="file" name="civil_id" id="id_id" ><br>
+          <input type="submit" name="submit_civil" id="upload_file" value="Upload"> <br><br>
+
+          <?php
+           $con=new mysqli("localhost","root","","project");
+           if (!$con) {
+              die("Connection failed: " . mysqli_connect_error());
+            }
+
+
+          if(isset($_POST['submit_cse']))  {
+              $PDF=$_FILES['cse_id']['name'];
+              $PDF_TYPE=$_FILES['cse_id']['type'];
+              $PDF_SIZE=$_FILES['cse_id']['size'];
+              $PDF_LOC=$_FILES['cse_id']['tmp_name'];
+              $PDF_STORE="pdf/cse/".$PDF;
+
+              move_uploaded_file($PDF_LOC,$PDF_STORE);
+
+              $con=new mysqli("localhost","root","","project");
+              if (!$con) {
+                  die("Connection failed: " . mysqli_connect_error());
+              }
+              $SQL="UPDATE pdf SET `CSE`='$PDF'
+              WHERE Number='1'";
+            //  $SQL="INSERT INTO pdf(CSE) VALUES ('$PDF')";
+              if(mysqli_query($con,$SQL)){
+                echo "<br> PDF Added successfully";
+            }else{
+               echo "Error: " . $sql . "<br>" . mysqli_error($con);
+            }
+
+          }    
+          
+          if(isset($_POST['submit_eee']))  {
+            $PDF=$_FILES['eee_id']['name'];
+            $PDF_TYPE=$_FILES['eee_id']['type'];
+            $PDF_SIZE=$_FILES['eee_id']['size'];
+            $PDF_LOC=$_FILES['eee_id']['tmp_name'];
+            $PDF_STORE="pdf/eee/".$PDF;
+
+            move_uploaded_file($PDF_LOC,$PDF_STORE);
+
+            $con=new mysqli("localhost","root","","project");
+            if (!$con) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+            $SQL="UPDATE pdf
+            SET eee = '$PDF'
+            WHERE Number = '1'";
+          //  $SQL="INSERT INTO pdf(CSE) VALUES ('$PDF')";
+            if(mysqli_query($con,$SQL)){
+              echo "<br> PDF Added successfully";
+          }else{
+             echo "Error: " . $sql . "<br>" . mysqli_error($con);
+          }
+
+        }     
+
+        if(isset($_POST['submit_civil']))  {
+            $PDF=$_FILES['civil_id']['name'];
+            $PDF_TYPE=$_FILES['civil_id']['type'];
+            $PDF_SIZE=$_FILES['civil_id']['size'];
+            $PDF_LOC=$_FILES['civil_id']['tmp_name'];
+            $PDF_STORE="pdf/civil/".$PDF;
+
+            move_uploaded_file($PDF_LOC,$PDF_STORE);
+
+            $con=new mysqli("localhost","root","","project");
+            if (!$con) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+            $SQL="UPDATE pdf
+            SET CIVIL = '$PDF'
+            WHERE Number = '1'";
+          //  $SQL="INSERT INTO pdf(CSE) VALUES ('$PDF')";
+            if(mysqli_query($con,$SQL)){
+              echo "<br> PDF Added successfully";
+          }else{
+             echo "Error: " . $sql . "<br>" . mysqli_error($con);
+          }
+
+        }   
+          
+
+          ?>
+
+         </form>
+     </div>
+
+     <!-- Component End -->
     </div>
 
-  
+    <!-- This_is_body_Class End -->
     </div>
     
 

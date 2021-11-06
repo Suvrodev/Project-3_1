@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Insert</title>
+    <div class="Title_top">
     <link rel="stylesheet" href="admin_modify.css">
-    <h2 class="title_cls">Welcome to Admin Panel(Modification)</h2>
+    <a href="LOGIN.php"> <img src="logo.jpeg" class="logoimg" width="50" height="50"></img> </a>
+    <h2 class="title_cls">
+       Welcome to Admin Panel(Modification)</h2>
+    </div>
+    <!-- <h2 class="title_cls">Welcome to Admin Panel(Modification)</h2> -->
 
     <style>
         #submit_id_m{

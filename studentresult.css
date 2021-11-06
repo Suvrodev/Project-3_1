@@ -1,9 +1,18 @@
-.title_cls {
+.Title_top {
     background: #B7E2F9;
     width: 100%;
     color: #0C4DA2;
     padding: 10px;
     border: 1px dotted green;
+    text-align: left;
+}
+
+.title_cls {
+    margin-top: -50px;
+    background: #B7E2F9;
+    width: 100%;
+    color: #0C4DA2;
+    padding: 10px;
     text-align: center;
 }
 
@@ -21,10 +30,13 @@
 }
 
 .Student_Activity {
-    margin-left: 34rem;
-    width: 110px;
+    margin-left: 29rem;
+    width: 155px;
     height: 25px;
     background-color: red;
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding: 5px;
 }
 
 .Footer_Class {

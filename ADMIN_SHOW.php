@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Insert</title>
     <link rel="stylesheet" href="admin_show.css">
-    <h2 class="title_cls">Welcome to Admin Panel(Show All Students)</h2>
+
+    <div class="Title_top">
+    <link rel="stylesheet" href="admin_modify.css">
+    <a href="LOGIN.php"> <img src="logo.jpeg" class="logoimg" width="50" height="50"></img> </a>
+    <h2 class="title_cls">
+      Welcome to Admin Panel(Show All Students)</h2>
+    </div>
+    <!-- <h2 class="title_cls">Welcome to Admin Panel(Show All Students)</h2> -->
 
     <style>
 table, th, td {

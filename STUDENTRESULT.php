@@ -7,9 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suvrodev</title>
     <link rel="stylesheet" href="studentresult.css">
-    <h2 class="title_cls">Result of Student</h2>
+
+    <div class="Title_top">
+    <link rel="stylesheet" href="admin_modify.css">
+    <a href="LOGIN.php"> <img src="logo.jpeg" class="logoimg" width="50" height="50"></img> </a>
+    <h2 class="title_cls">
+     Result of Student</h2>
+    </div>
+
+    <!-- <h2 class="title_cls">Result of Student</h2> -->
+
     <style>
         table{
+            margin-left:auto; 
+            margin-right:auto;
+            text-align: center;
             border-collapse: collapse;
             border: 2px solid black;
             width: 500px;
@@ -171,7 +183,7 @@
                        </tr>
                    </table>
                     <br>
-                   <input type="submit" name="submit" id="submit_id" value="modify">
+                   <!-- <input type="submit" name="submit" id="submit_id" value="modify"> -->
                 </form>          
             </div>
 

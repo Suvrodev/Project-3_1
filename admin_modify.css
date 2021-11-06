@@ -1,9 +1,18 @@
-.title_cls {
+.Title_top {
     background: #B7E2F9;
     width: 100%;
     color: #0C4DA2;
     padding: 10px;
     border: 1px dotted green;
+    text-align: left;
+}
+
+.title_cls {
+    margin-top: -50px;
+    background: #B7E2F9;
+    width: 100%;
+    color: #0C4DA2;
+    padding: 10px;
     text-align: center;
 }
 

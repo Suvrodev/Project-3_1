@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Insert</title>
     <link rel="stylesheet" href="admin_insert.css">
-    <h2 class="title_cls">Welcome to Admin Panel(Insertion)</h2>
+
+    <div class="Title_top">
+    <a href="LOGIN.php"> <img src="logo.jpeg" class="logoimg" width="50" height="50"></img> </a>
+    <h2 class="title_cls">
+       Welcome to Admin Panel(Insertion)</h2>
+    </div>
+   
+    <!-- <h2 class="title_cls">Welcome to Admin Panel(Insertion)</h2> -->
 </head>
 <body>
 
@@ -121,8 +128,8 @@
                     <label for="flocation">Location :</label>
                     <input type="text" name="address_id"  id="location_id" required><br><br>
                     <!-- <textarea name="address_id"   id="location_id" required cols="25" rows="2"> -->
-                    </textarea>
-                    <br><br>
+                    <!-- </textarea> -->
+                   
 
 
                     <label for="fpass">Password:</label>
