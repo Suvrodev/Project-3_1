@@ -61,7 +61,7 @@
         <div class="Academic_container">
             <a href="#">Academic</a>
             <div class="Academic_content">
-                <a href="https://nwu.edu.bd/class_routine.php" target="_blank">Routine</a>
+                <a href="DISPLAYPDF.php" target="_blank">Routine</a>
                 <a href="https://drive.google.com/file/d/1VKz-_dN9DqC61DXMSiU-ZiVw-rT1LzTy/view?fbclid=IwAR2jHA3mM-7G4TYv
                 _sHa43MrOkHW8M2DzsLsy5hrsGS-5Xl_ME8vNOR76hs" target="_blank">Syllebus</a>
             </div>

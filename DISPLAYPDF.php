@@ -27,14 +27,14 @@
             </div>
 
             <!-- Link List -->
-            <div class="Link_List">
+            <!-- <div class="Link_List">
                 <a href="LOGIN.php" >Student Panel</a><br><br>
                  Admin Panel<br><br>
                 <a href="ADMIN_INSERT.php" >Insert</a> <br> <br>
                 <a href="ADMIN_MODIFY.php" >Modify</a> <br><br>
                 <a href="ADMIN_DELETE.php" >Delete</a> <br><br>
                 <a href="ADMIN_SHOW.php" >Show Students</a> <br><br>
-            </div>
+            </div> -->
             <!-- Link_Clss End -->
         </div>
 
