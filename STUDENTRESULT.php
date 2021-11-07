@@ -32,6 +32,7 @@
        border: 2px solid black;
        text-align: center;
        padding: 3px;
+       height: 30px;
       
        }
 
@@ -86,7 +87,7 @@
           die("Connection failed: " . mysqli_connect_error());
         }
 
-        $Select_sqll="SELECT ID, Name, Age, Sex, Department, Semester, CGPA, MeritalStatus, Religion, Phone_Number, DOB, Email, Location, Password 
+        $Select_sqll="SELECT ID, Name, Age, Sex, Department, Semester, CGPA, MeritalStatus, Religion, Phone_Number, DOB, Email, Location, Password,Picture
         FROM info WHERE ID='".$ID."'";
         $result = $con->query($Select_sqll);
 
@@ -111,6 +112,11 @@
               $MAIL=  $row["Email"];
               $LOC=  $row["Location"];
               $PASSWORDD=  $row["Password"] ;
+              $Pic= $row['Picture'];
+             // echo "$Pic"
+              ?> 
+              <img src="img/std/<?php echo $Pic; ?> " alt="Picture" style="width: 100px; height:100;">
+              <?php
                 //echo "$IDD $NAME  $AGE $SEX  $DEPARTMENT $SEMESTER $CGPA   $MERITAL_STATUS $RELIGOION $PHN $DOB $MAIL  $LOC $PASSWORDD";
             }
          }else{
@@ -123,6 +129,15 @@
                    <table>
                        <tr>
                            <th colspan="2">Students Information</th>
+                       </tr>
+                       <tr>
+                           <td>Image</td>
+                           <td> 
+                               <?php while($info=mysqli_fetch_array($Result) ){
+                                   ?> <img src="img/std/<?php echo $info['Picture']; ?> " alt="Picture" style="width: 50px; height:50px;">
+                                   <?php
+                               } ?>
+                          </td>
                        </tr>
                        <tr>
                            <td>ID</td>

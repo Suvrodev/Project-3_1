@@ -56,8 +56,10 @@
               <form action="DISPLAYPDF.php" method="POST" name="pdfform" enctype="multipart/form-data">
               <input type="submit" name="cser" id="cseb" value="CSE"> 
               <input type="submit" name="eeer" id="cseb" value="EEE">
-              <input type="submit" name="civilr" id="cseb" value="Civil">
+              <input type="submit" name="civilr" id="cseb" value="Civil">    
+              </form>
 
+              </div>
               <div class="routinephp">
               <?php
 
@@ -108,35 +110,9 @@
                         <?php
    
                     }
-                   }
-
-
-               
-                //   $conn=new mysqli("localhost","root","","project");
-                //   if (!$conn) {
-                //       die("Connection failed: " . mysqli_connect_error());
-                //   }
-
-                //  $SQL="SELECT CSE 
-                //  FROM pdf
-                //  WHERE Number='1'";
-
-                //    if(isset($_POST['cser'])){
-                //          header("Content-type: application/pdf");
-                // header("Content-Disposition: attachment; filename=pdf\Fall-2021-Routine-4-Year-Tri-Semester.pdf");
-                // header("Peagma: no-cache");
-                // header("Expires: 0");
-                // readfile("pdf\Fall-2021-Routine-4-Year-Tri-Semester.pdf");
-                // exit;
-                //    }         
+                   }       
               ?>      
               </div>
-              </form>
-
-
-
-              </div>
-                
 
 
 

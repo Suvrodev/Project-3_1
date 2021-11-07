@@ -58,8 +58,11 @@
           </div>
           <div class="insert_DataForm">
 
-          <form action="ADMIN_INSERT.php" method="POST" name="insert_form" target="_self" id="idf">
+          <form action="ADMIN_INSERT.php" method="POST" name="insert_form" target="_self" id="idf" enctype="multipart/form-data">
                     <br><br><br><br>
+                    <label for="fimg">Choose Picture :</label>
+                    <input type="file" name="img_id"  id="id_id" > <br><br>
+
                     <label for="fid">ID Number :</label>
                     <input type="number" name="id_id" placeholder="20192011010" id="id_id" required><br><br>
 
@@ -175,6 +178,16 @@
                      $LOCATION=$_POST['address_id'];
                      $PASSWORD=$_POST['password_id'];
 
+                     /////////////Image/////////////////////
+                     $IMG=$_FILES['img_id']['name'];
+                     $IMG_TYPE=$_FILES['img_id']['type'];
+                     $IMG_SIZE=$_FILES['img_id']['size'];
+                     $IMG_LOC=$_FILES['img_id']['tmp_name'];
+                     $IMG_STORE="img/std/".$IMG;
+         
+                     move_uploaded_file($IMG_LOC,$IMG_STORE);
+                     ///////////End Image///////////////////
+
                      if($MERITAL_COUNT==0 || $RELIGION_COUNT==0){
                          echo "Input Not Valid<br>";
                      }
@@ -209,10 +222,10 @@
                         if($count==0){
                             $sql="INSERT INTO
                              `info`(`ID`, `Name`, `Age`, `Sex`, `Department`, `Semester`, `CGPA`, `MeritalStatus`, `Religion`, `Phone_Number`,
-                              `DOB`, `Email`, `Location`, `Password`) 
+                              `DOB`, `Email`, `Location`, `Password`, `Picture`) 
                               VALUES 
                             ('".$ID."','".$NAME."','".$AGE."','".$SEX."','".$DEPARTMENT."','".$SEMESTER."','".$CGPA."','".$MERITAL."','".$RELIGION."','".$PHONE."','".$DOB."',
-                             '".$MAIL."','".$LOCATION."','".$PASSWORD."')";
+                             '".$MAIL."','".$LOCATION."','".$PASSWORD."','".$IMG."')";
                         //  $sql = "INSERT INTO info  VALUES ('".$ID."','".$NAME."','".$AGE."','".$SEX."','".$DEPARTMENT."','".$SEMESTER."',
                         //  '".$CGPA."','".$MERITAL."','".$RELIGION."','".$PHONE."','".$DOB."','".$MAIL."','".$LOCATION."','".$PASSWORD."')";
                          if(mysqli_query($con,$sql)){

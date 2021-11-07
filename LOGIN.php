@@ -148,15 +148,17 @@
 
              <div class="Login_Form_header">
 
-                <form action="LOGIN.php" method="POST" name="login_form" target="_self">
+                <form action="LOGIN.php" method="POST" name="login_form" target="_self" >
                    
                     <br><br><br><br>
+                   
+
                     <label for="fid">ID Number :</label>
-                    <input type="number" name="id_id_DT"  id="id_id" value="20192011010"> <br><br>
+                    <input type="number" name="id_id_DT"  id="id_id" placeholder="20192011010"> <br><br>
 
                     <label for="fpass">Password:</label>
                     &nbsp; &nbsp;
-                    <input type="password" name="password_id_DT" id="password_id" value="78876338">
+                    <input type="password" name="password_id_DT" id="password_id" >
                     <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <input type="submit" name="submit" id="submit_id">
                     <input type="reset" name="Reset" id="reset_id" >
